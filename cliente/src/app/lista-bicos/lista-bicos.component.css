@@ -1,0 +1,9 @@
+@import "../autorizaextra/historico/historico.component.css";
+
+.abastecimento li{
+    list-style: none;
+}
+
+.abastecimento ul{
+    border-style: groove;
+}

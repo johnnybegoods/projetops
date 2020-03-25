@@ -1,0 +1,50 @@
+{"ListaAbastecimentos":[{
+"DataHora": "04\/12\/2019 10:48:16",
+"Descricao": "ETANOL HIDRATADO",
+"Funcionario": "CARLOS ALBERTO PASIANI",
+"Id": 11240,
+"IdBico": 5,
+"IdCombustivel": 1491,
+"IdFuncionario": 1449,
+"IdTipoPreco": 10,
+"Litros": 45.00000,
+"NumeroBico": 1,
+"Preco": 1.89000,
+"PrevalecePrecoBico": false,
+"Selecionar": false,
+"Total": 85.05000
+},
+{
+"DataHora": "04\/12\/2019 10:48:13",
+"Descricao": "ETANOL HIDRATADO",
+"Funcionario": "CARLOS ALBERTO PASIANI",
+"Id": 11239,
+"IdBico": 5,
+"IdCombustivel": 1491,
+"IdFuncionario": 1449,
+"IdTipoPreco": 10,
+"Litros": 16.93100,
+"NumeroBico": 1,
+"Preco": 1.89000,
+"PrevalecePrecoBico": false,
+"Selecionar": false,
+"Total": 32.00000
+},
+{
+"DataHora": "04\/12\/2019 10:48:10",
+"Descricao": "ETANOL HIDRATADO",
+"Funcionario": "CARLOS ALBERTO PASIANI",
+"Id": 11238,
+"IdBico": 5,
+"IdCombustivel": 1491,
+"IdFuncionario": 1449,
+"IdTipoPreco": 10,
+"Litros": 98.00000,
+"NumeroBico": 1,
+"Preco": 1.89000,
+"PrevalecePrecoBico": false,
+"Selecionar": false,
+"Total": 185.22000
+}
+]
+}

@@ -1,0 +1,59 @@
+<h3 style="border-bottom-style: groove;">Nova Autorização</h3>
+<div [class.toastt]="success" [class.closed]="!success">
+  <h6>Sucesso !</h6>
+  <p>Cadastrado com Sucesso</p>
+</div>
+
+<div [class.error]="error" [class.closed]="!error">
+  <h6>Erro !</h6>
+  <p>Erro no envio de dados.</p>
+</div>
+<div [class.lote]="lote" [class.closed]="!lote" >
+  <h4>{{ servidor.length }} Servidores Selecionados</h4>
+  <input type="button" class="btn btn-success" value="Confirmar" (click)="confirma()">
+  <input type="button" class="btn btn-warning" value="Cancelar" (click)="cancela()">
+</div>
+<div class="div-table" [class.div-table-closed]="showForm">
+  <table class="table" *ngIf="pessoas$ | async as pessoas" >
+    <thead>
+      <tr>
+        <th scope="col"><input type="text" class="form-control" placeholder="Buscar" 
+          [(ngModel)]="filter" ></th>
+    </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let p of pessoas | filter:filter">
+        <td (click)="selectPessoa(this.p)" [class.actived]="servidor != null && servidor.indexOf(this.p) >= 0" >{{ p.nome }}</td>
+  </table>
+</div>
+  <form [formGroup]="formAut" (ngSubmit)="onSubmit()"
+      class="formulario" [class.formulario-open]="showForm">
+      <label for="nome">Servidor</label>
+      <input class="form-control" type="text" readonly id="nome" formControlName="nome" >
+      <div class="botao-varios">
+        <input type="button" class="btn btn-success" value="Adicionar Vários" (click)="setLote()">
+      </div>
+      <label for="data">Data Ocorrência</label>
+      <input class="form-control" type="date" id="data" formControlName="data">
+      <div class="alert-erro" [class.alert-danger]="verificaValidTouched('data')" >
+        Uma data válida deve ser selecionada
+      </div>
+      <label for="just">Justificativa</label>
+      <textarea class="form-control" formControlName="justificativa" id="just" cols="30" rows="5" maxlength="140" style="font-size: 20px;"
+          [class.input-error]="verificaValidTouched('justificativa')"></textarea>
+      <div class="alert-erro" [class.alert-danger]="verificaValidTouched('justificativa')" >
+        Justificativa Inválida
+      </div>
+      <label for="horas">Horas Autorizadas</label>
+      <div class="qtdade-horas">
+        <input class="form-control" type="time" id="horas" formControlName="horas" >
+        <input  type="button" class="btn btn-success" [class.btn-success]="pgto"
+          [class.btn-warning]="!pgto" (click)="setTipo()" value="{{ tipo }}" >
+          
+      </div>
+      <div class="alert-erro" [class.alert-danger]="verificaValidTouchedTime('horas')" >
+        Quantidade de horas inválida
+      </div>
+      <button class="btn btn-primary">Enviar Autorização</button>
+      <input type="button" class="btn btn-danger" (click)="cancela()" value="Cancelar">
+  </form>

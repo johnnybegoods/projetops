@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Orbitron|Righteous&display=swap');
+
+.cabecalho{
+    width: 100%;
+    height: 10vh;
+    padding: 0% 2%  ;
+    background-color: rgb(47, 47, 65);
+}
+.cabecalho img, .cabecalho h5, .cabecalho h6{
+    display: inline;
+    font-size: 24px;
+    color: rgb(240, 17, 17);
+    font-weight: bold;
+    vertical-align: middle;
+}
+.cabecalho h6{
+    margin-left: 2%;
+    font-size: 16px;
+    color: white;
+}
+.login{
+    width: 15%;
+    height: 10vh;
+    float: right;
+    padding-top: 1.5%;
+}
+.glyphicon:hover{
+    cursor: pointer;
+    font-weight: bold;
+}
+.glyphicon{
+    font-size: 20px;
+    vertical-align: middle;
+    margin-left: 3%;
+    color:white;
+    display: inline;
+}
+.login a{
+    font-size: 15px;
+    display: inline;
+    color: white;
+    font-weight: bold;
+    vertical-align: middle;
+    margin-left: 30%;
+    text-decoration: none;
+}
+.cabecalho h1, .cabecalho h2{
+    font-family: 'Orbitron', sans-serif;
+    display: inline;
+    vertical-align: middle;
+    margin-left: 10%;
+    color: rgb(13, 187, 106);
+    font-weight: bold;
+}
+.cabecalho h2{
+    margin-left: 0;
+    color: white;
+
+}
+
+.conteudo{
+    width: 18%;
+    height: 90vh;
+    background-color: rgb(41, 41, 41);
+    transition: all;
+    transition-duration: 1s;
+    float: left;
+}
+.conteudo-closed{
+    width: 0;
+    transition: all;
+    transition-duration: 0.5s;
+}
+.conteudo ul{
+    padding: 15% 5%;
+}
+.conteudo li{
+    color:white;
+    list-style: none;
+    padding: 5% 1%;
+    font-size: 16px;
+}
+.conteudo li:hover{
+    font-weight: bold;
+    cursor: pointer;
+}
+.sub-menu li, .sub-menu.glyphicon{
+    font-size: 12px;
+    margin-left: 10%;
+}
+.sub-menu li:hover{
+    color:rgb(5, 161, 5);
+}
+.sub-menu li:hover .glyphicon{
+    color:rgb(5, 161, 5);
+}
+.sub-menu{
+    height: 35vh;
+    transition: all;
+    transition-duration: 1s;
+    overflow: hidden;
+    padding: 0% 0% !important;
+}
+.sub-menu-closed{
+    height: 0;
+    overflow: hidden;
+    transition: all;
+    transition-duration: 1s;
+}
+
+.principal{
+    width: 82%;
+    height: 90vh;
+    float: left;
+    padding: 1% 2%;
+    overflow: scroll;
+}
+.ativo li{
+    color:green;
+    font-size: 12px;
+    margin-left: 10%;
+    color:rgb(5, 161, 5);
+}
+@media only screen and (max-width: 1085px){
+    .conteudo{
+        width: 20%;
+    }
+    .principal{
+        width: 80%;
+    }      
+}
+
+@media only screen and (max-width: 933px){
+    .login a{
+        width: 100%;
+    }
+    .cabecalho img{
+        width: 6%;
+    }
+    .conteudo{
+        width: 23%;
+    }
+    .principal{
+        width: 77%;
+    } 
+}
+
+@media only screen and (max-width: 780px){
+    .conteudo{
+        width: 25%;
+    }
+    .principal{
+        width: 75%;
+    } 
+}
+
+@media only screen and (max-width: 677px){
+    cuser{
+        display: none;
+    }
+    .cabecalho h1, .cabecalho h2{
+        margin-left: 2%;
+    }
+}
+
+@media only screen and (max-width: 800px){
+    .cabecalho img{
+        width: 7.5%;
+    }
+}
+
+@media only screen and (max-width: 630px){
+    
+    .cabecalho h1, .cabecalho h2{
+        font-size: 24px;
+    }
+    .cabecalho h5, .cabecalho h6{
+        font-size: 15px;
+    }
+    .cabecalho img{
+        width: 9%;
+    }
+    .conteudo{
+        width: 25%;
+    }
+    .principal{
+        width: 75%;
+    } 
+}
+
+@media only screen and (max-width: 550px){
+    
+    .cabecalho h5, .cabecalho h6{
+        display: none;
+    }
+    .cabecalho img{
+        width: 10%;
+    }
+    .conteudo{
+        width: 28%;
+    }
+    .principal{
+        width: 72%;
+    } 
+}
+
+@media only screen and (max-width: 450px){
+    
+    .cabecalho img{
+        width: 12%;
+    }
+}
+
+@media only screen and (max-width: 768px){
+    .conteudo{
+        width: 100%;
+        height: 50vh;
+        overflow: scroll;
+    }
+    .principal{
+        width: 100%;
+    } 
+    .conteudo ul{
+        padding: 4% 0;
+    }
+    .conteudo li{
+        text-align: center;
+        padding: 2% 5%;
+    }
+}

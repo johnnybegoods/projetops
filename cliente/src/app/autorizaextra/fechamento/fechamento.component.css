@@ -1,0 +1,6 @@
+@import "../historico/historico.component.css";
+.btn{
+    margin-top: 3%;
+    width: 100%;
+    font-size: 20px;
+}

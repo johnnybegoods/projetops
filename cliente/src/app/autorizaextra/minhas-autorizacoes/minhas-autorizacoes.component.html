@@ -1,0 +1,88 @@
+<h3 style="border-bottom-style: groove;">Minhas Solicitações</h3>
+<div *ngIf="competencias$ | async as competencias">
+    <div class="competencia" (click)="openCompetencia(this.c.Id)" 
+          *ngFor="let c of competencias" [class.competencia-open]="c.Id == comp"
+                [class.competencia-open-empty]="c.Id == comp && autorizacoes.length == 0">
+        <h4>{{ c.Competencia_.substring(5,7) }}/{{ c.Competencia_.substring(0,4) }}</h4>
+        <h5 [class.aberto]="c.situacao == 'ABERTO'"
+            [class.fechado]="c.situacao == 'FECHADO'" >{{ c.Situacao }}</h5>
+        <div class="autorizacoes" >
+            <div class="autorizadas">
+                <h5>Autorizadas</h5>
+                <ul>
+                    <li *ngFor="let aut of autorizacoes">
+                        <table class="tg" *ngIf="aut.autorizada">
+                            <tr>
+                              <th class="tg-vlri">Funcionário</th>
+                              <th class="tg-cly1" colspan="3">{{ aut.servidor[0].nome }}</th>
+                            </tr>
+                            <tr>
+                              <td class="tg-vlri">Data da Ocorrência</td>
+                              <td class="tg-cly1">{{ aut.data_ocorrencia }}</td>
+                              <td class="tg-o9fy">Data da Autorização</td>
+                              <td class="tg-0lax">{{ aut.data_autorizacao }}</td>
+                            </tr>
+                            <tr>
+                              <td class="tg-tx28" colspan="4">JUSTIFICATIVA</td>
+                            </tr>
+                            <tr>
+                              <td class="tg-0lax" colspan="4">{{ aut.justificativa }}</td>
+                            </tr>
+                            <tr>
+                              <td class="tg-o9fy">Quantidade de Horas</td>
+                              <td class="tg-0lax">{{ aut.horaString }}</td>
+                              <td class="tg-o9fy">Forma de Pagamento</td>
+                              <td class="tg-0lax" *ngIf="!aut.pgto" >Banco de Horas</td>
+                              <td class="tg-0lax" *ngIf="aut.pgto" >Pagamento</td>
+                            </tr>
+                            <tr>
+                              <td class="tg-o9fy">Autorizado por</td>
+                              <td class="tg-0lax" colspan="3">{{ aut.responsavel.nome }}</td>
+                            </tr>
+                          </table>
+                    </li>
+                </ul>
+            </div>
+
+
+            <div class="nao-autorizadas">
+                <h5>Não Autorizadas</h5>
+                <ul>
+                    <li *ngFor="let aut of autorizacoes">
+                        <table class="tg" *ngIf="!aut.autorizada">
+                            <tr>
+                              <th class="tg-vlri">Funcionário</th>
+                              <th class="tg-cly1" colspan="3">{{ aut.servidor[0].nome }}</th>
+                            </tr>
+                            <tr>
+                              <td class="tg-vlri">Data da Ocorrência</td>
+                              <td class="tg-cly1">{{ aut.data_ocorrencia }}</td>
+                              <td class="tg-o9fy">Data da Autorização</td>
+                              <td class="tg-0lax">{{ aut.data_autorizacao }}</td>
+                            </tr>
+                            <tr>
+                              <td class="tg-tx28" colspan="4">JUSTIFICATIVA</td>
+                            </tr>
+                            <tr>
+                              <td class="tg-0lax" colspan="4">{{ aut.justificativa }}</td>
+                            </tr>
+                            <tr>
+                              <td class="tg-o9fy">Quantidade de Horas</td>
+                              <td class="tg-0lax">{{ aut.horaString }}</td>
+                              <td class="tg-o9fy">Forma de Pagamento</td>
+                              <td class="tg-0lax" *ngIf="!aut.pgto" >Banco de Horas</td>
+                              <td class="tg-0lax" *ngIf="aut.pgto" >Pagamento</td>
+                            </tr>
+                            <tr>
+                              <td class="tg-o9fy">Autorizado por</td>
+                              <td class="tg-0lax" colspan="3">Não Autorizado. Aguardando Deferimento de: 
+                                {{ aut.responsavel.nome }}</td>
+                            </tr>
+                          </table>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+

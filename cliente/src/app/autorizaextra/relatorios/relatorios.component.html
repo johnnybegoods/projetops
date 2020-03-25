@@ -1,0 +1,10 @@
+<h3 style="border-bottom-style: groove;">Relatórios</h3>
+<div *ngIf="competencias$ | async as competencias">
+    <div class="competencia" (click)="openCompetencia(this.c.Id)" 
+          *ngFor="let c of competencias" [class.competencia-open]="c.Id == compId && autorizacoes.length > 0"
+                [class.competencia-open-empty]="c.Id == compId && autorizacoes.length == 0">
+        <h4>{{ c.Competencia_.substring(5,7) }}/{{ c.Competencia_.substring(0,4) }}</h4>
+        <h5 [class.aberto]="c.situacao == 'ABERTO'"
+            [class.fechado]="c.situacao == 'FECHADO'" >{{ c.Situacao }}</h5>
+    </div>
+</div>

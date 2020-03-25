@@ -1,0 +1,40 @@
+@import "../historico/historico.component.css";
+.competencia{
+    width: 100%;
+    height: 11vh;
+    border-style: outset;
+    overflow: hidden;
+    text-align: center;
+    transition: all;
+    transition-duration: 1s;
+}
+.competencia:hover, .competencia-open:hover{
+    cursor: pointer;
+    background-color: rgb(199, 199, 224);
+}
+
+.competencia-open{
+    width: 100%;
+    height: 80vh;
+    border-style: outset;
+    overflow: hidden;
+    text-align: center;
+    transition: all;
+    transition-duration: 1s;
+}
+.autorizacoes{
+    width: 100%;
+    height: 100vh;
+    overflow: scroll;
+}
+.autorizadas, .nao-autorizadas{
+    width: 50%;
+    height: 100vh;
+    float: left;
+    margin-top: 3%;
+    overflow: scroll;
+}
+.autorizadas{border-right-style: ridge;}
+.nao-autorizadas{border-left-style: ridge;}
+.autorizadas h6, .autorizadas h5{color:green;}
+.nao-autorizadas h6, .nao-autorizadas h5{color:red;}

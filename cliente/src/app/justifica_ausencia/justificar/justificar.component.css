@@ -1,0 +1,56 @@
+@import "../../autorizaextra/nova-autorizacao/nova-autorizacao.component.css";
+
+
+.opt, .opt2{
+    width: 30%;
+}
+
+.opt2{
+    margin-top: 1%;
+}
+.alert-erro{
+    display: none;
+}
+.alert-danger{
+    display: block;
+}
+
+
+.sub-menu, .upload-open{
+    height: 10vh;
+    width: 100%;
+    transition: all;
+    transition-duration: 1s;
+}
+
+.sub-menu-closed, .upload-closed{
+    height: 0vh;
+    width: 0%;
+    transition: all;
+    transition-duration: 1s;
+    overflow: hidden;
+}
+
+
+.data_fim{
+    height: 10vh;
+    width: 100%;
+    overflow: hidden;
+    transition: all;
+    transition-duration: 1s;
+}
+.data_fim-closed{
+    width: 0%;
+    height: 0vh;
+    overflow: hidden;
+    transition: all;
+    transition-duration: 1s;
+}
+
+.salvar{
+    height: 20vh;
+    width: 100%;
+    overflow: hidden;
+    transition: all;
+    transition-duration: 1s;
+}

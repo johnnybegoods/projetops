@@ -1,0 +1,36 @@
+<div class="container-fluid">
+    <div class="wrapper fadeInDowneInDown">
+        <div id="formContent">
+            <!-- Tabs Titles -->
+        
+            <!-- Icon -->
+            <div class="fadeIn first">
+                <img src="assets/logo.png" id="icon" />
+            </div>
+            <h3 class="underlineHover">e-Rotinas</h3>
+        
+            <!-- Login Form -->
+            <form #f="ngForm" (ngSubmit)="onSubmit(f)" >
+                <div  padding  *ngIf="f.submitted && cpfCnpjv?.invalid"  class="error-cpf">
+                    CPF Inválido
+                </div>
+                <input type="text"  id="login" class="fadeIn second" nccCpfCnpjValidator #cpfCnpjv="ngModel" 
+                            nccCpfCnpjMask [(ngModel)]="credencial.login" name="cpf" placeholder="CPF">
+                <input type="password" id="password" [(ngModel)]="credencial.senha" class="fadeIn second" name="senha" placeholder="senha">
+                <input type="submit" class="fadeIn fourth" value="Entrar">
+            </form>
+            <p class="text-center">
+                <small id="passwordHelpInline" class="text-muted"> JotaWEB Soluções Tecnológicas™ </small>
+              </p>
+              
+        
+            <!-- Remind Passowrd -->
+            <div id="formFooter">
+                <a class="underlineHover" routerLink="/cadastro">Criar uma Conta</a>
+            </div>
+        
+        </div>
+        
+    </div>
+    
+</div>

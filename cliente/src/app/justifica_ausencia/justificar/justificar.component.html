@@ -1,0 +1,67 @@
+<div class="principal">
+    <div class="div-table" [class.div-table-closed]="servidor != null">
+        <table class="table" *ngIf="pessoas$ | async as pessoas" >
+          <thead>
+            <tr>
+              <th scope="col"><input type="text" class="form-control" placeholder="Buscar" 
+                [(ngModel)]="filter" ></th>
+          </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let p of pessoas | filter:filter">
+              <td (click)="selectPessoa(this.p)" >{{ p.nome }}</td>
+        </table>
+      </div>
+</div>
+<form [formGroup]="justForm" (ngSubmit)="onSubmit()"
+      class="formulario" [class.formulario-open]="servidor != null">
+
+    <label for="nome">Servidor</label>
+    <input class="form-control" type="text" readonly id="nome" formControlName="nome" >
+    <label for="data_incial">Data do Afastamento</label>
+      <input class="form-control" type="date" id="data_inicial" formControlName="data_inicial" (change)="updateCalendar()">
+      <div class="data_fim" [class.data_fim-closed]="!flexDate">
+        <label for="data_final">Data Final</label>
+        <input class="form-control" type="date" id="data_final" formControlName="data_final">
+      </div>
+    <div class="form-group">
+      <label for="motivo">Motivo da Ausência</label>
+      <select class="form-control opt" id="motivo" (change)="onSelect($event.target.value)">
+        <option value="0">Escolha uma opção</option>
+        <option *ngFor="let a of abonos" value="{{ a.id }}" >{{ a.motivo }}</option>
+      </select>
+      <div class="sub-menu" [class.sub-menu-closed]="abono.sub_opt != 1">
+        <select class="form-control opt2" id="parentesco" (change)="onSelect2($event.target.value)" >
+          <option value="0">Escolha um grau de parentesco</option>
+          <option value="1" >avó, tio, sogro, neto, cunhado, genro, nora, 
+                            sobrinho, pessoa sob dependência econômica.</option>
+          <option value="2" >cônjuge ou companheiro, pai, mãe, padrasto, madrasta, irmão, 
+                        filhos de qualquer natureza, menor sob guarda ou tutela.</option>                  
+        </select>
+      </div>
+      <div class="data_fim" [class.data_fim-closed]="!casamento">
+      <select class="form-control opt" id="casamento" (change)="onSelectCasamento($event.target.value)" >
+        <option value="0">Escolha o período da Licença</option>
+        <option value="1">5 dias úteis na semana posterior</option>
+        <option value="2">5 dias úteis na semana anterior</option>
+      </select>
+      </div>
+      <div class="data_fim" [class.data_fim-closed]="!fixDate" >
+        <label for="data_final">Data Final</label>
+      <input class="form-control" type="date" id="data_final" readonly formControlName="data_final">
+    </div>
+    </div>
+
+    <div [class.upload-open]="abono.anexo" [class.upload-closed]="!abono.anexo">
+      <input type="file" (change)="inputFileChange($event)">
+    </div>
+
+    <div class="alert-erro" [class.alert-danger]="!formato" >
+     Anexo deve ser no formato PDF
+    </div>
+
+    <div class="sub-menu-closed" [class.salvar]="concluido">
+      <button class="btn btn-primary">Enviar Justificativa</button>
+    </div>
+
+</form>

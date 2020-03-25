@@ -1,0 +1,30 @@
+<h3 style="border-bottom-style: groove;">Histórico</h3>
+<div *ngIf="ListaBicos$ | async as lista">
+    <div class="competencia" (click)="selectBico(this.l.Id)" 
+          *ngFor="let l of lista" [class.competencia-open]="l.Id == bico">
+        <h4>{{ l.Id }} | {{ l.DescricaoCombustivel }}</h4>
+        <h5>Número = {{ l.Numero }}</h5>
+        <div class="abastecimento"  *ngIf="abastecimentos$ | async as abastecimentos">
+            <ul *ngFor="let a of abastecimentos">
+                <li>Data Hora = {{a.DataHora }}</li>
+                <li>Desc.: {{ a.Descricao }}</li>
+                <li>Funcionário = {{ Funcionario }}</li>
+                <li>Id | {{ a.Id }}</li>
+                <li>Bico: {{ a.IdBico }}</li>
+                <i>Id Combustível: {{ a.IdCombustivel }}</i>
+                <li>Id Funcionário: {{ a.IdFuncionario }}</li>
+                <li>Id Tipo Preço:   {{ a.IdTipoPreco }}</li>
+                <li>Litros = {{ a.Litros }}</li>
+                <li>num. bico: {{ a.NumeroBico }}</li>
+                <li>Preço = {{ a.Preco }}</li>
+                <li *ngIf = "a.PrevalecePrecoBico">Prevalece bico</li>
+                <li *ngIf = "!a.PrevalecePrecoBico">Não Prevalece bico</li>
+                <li *ngIf = "a.Selecionar">Selecionar</li>
+                <li *ngIf = "!a.Selecionar">Não Selecionar</li>
+                <li>Total R$ {{ a.Total }}</li>
+            </ul>
+
+        </div>
+    </div>
+</div>
+

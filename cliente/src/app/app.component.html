@@ -1,0 +1,59 @@
+
+<div class="cabecalho">
+  <span class="glyphicon glyphicon-align-justify"
+   (click)="closed()" ></span>
+  <img src="assets/logo.png" width="5%">
+  <h5>PSApp</h5>
+  <h6>Cliente</h6>
+  <div class="login">
+    <a routerLink="/login">
+      <span class="glyphicon glyphicon-user">
+      </span>
+      Login
+    </a>
+  </div>
+  <!--<h1>e-<h2>Rotinas</h2></h1>!-->
+</div>
+
+<div class="conteudo"
+ [class.conteudo-closed]="close == true" >
+
+ <ul>
+   <li (click)="home()"><span class="glyphicon glyphicon-home"></span>
+    Início</li>
+   <li (click)="autTrue()">
+     <span class="glyphicon glyphicon-menu-down"></span> 
+      Menu
+      <ul class="sub-menu" [class.sub-menu-closed]="aut == false">
+        <li [style.color]="opt == 1 ? 'green' : white" (click)="optAut(1)" routerLink="/lista-bicos" >
+          <span [style.color]="opt == 1 ? 'green' : white" class="glyphicon glyphicon-th-list"></span> 
+          Listar Bicos</li>
+        <!--<li [style.color]="opt == 2 ? 'green' : white" (click)="optAut(2)" routerLink="/historico" >
+          <span [style.color]="opt == 2 ? 'green' : white" class="glyphicon glyphicon-floppy-save"></span>  
+          Histórico</li  >
+          <li [style.color]="opt == 3 ? 'green' : white" (click)="optAut(3)" routerLink="/minhasautorizacoes" >
+          <span [style.color]="opt == 3 ? 'green' : white" class="glyphicon glyphicon-menu-down"></span> 
+          Minhas Autorizações</li>
+        <li [style.color]="opt == 4 ? 'green' : white" (click)="optAut(4)" routerLink="/fechamento"  >
+          <span [style.color]="opt == 4 ? 'green' : white" class="glyphicon glyphicon-lock"></span>  
+          Fechar Competência</li>
+        <li [style.color]="opt == 5 ? 'green' : white" (click)="optAut(5)" routerLink="/relatorios" >
+          <span [style.color]="opt == 5 ? 'green' : white" class="glyphicon glyphicon-file"></span> 
+          Relatórios</li> !-->
+      </ul>
+    </li>
+   <!--<li (click)="justTrue()" ><span class="glyphicon glyphicon-transfer"></span>  
+    Justifica Ausência
+    <ul class="sub-menu" [class.sub-menu-closed]="just == false">
+        <li [style.color]="opt == 1 ? 'green' : white" (click)="optAut(1)" routerLink="/justificar" >
+          <span [style.color]="opt == 1 ? 'green' : white" class="glyphicon glyphicon-edit"></span> 
+          Justificar Ausência</li>
+    </ul>
+  
+  </li>!-->
+ </ul >
+</div>
+
+<div class="principal">
+  <router-outlet></router-outlet>
+</div>
