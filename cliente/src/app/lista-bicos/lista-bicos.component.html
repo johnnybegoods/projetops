@@ -1,4 +1,4 @@
-<h3 style="border-bottom-style: groove;">Histórico</h3>
+<h3 style="border-bottom-style: groove;">Lista Bicos</h3>
 <div *ngIf="ListaBicos$ | async as lista">
     <div class="competencia" (click)="selectBico(this.l.Id)" 
           *ngFor="let l of lista" [class.competencia-open]="l.Id == bico">

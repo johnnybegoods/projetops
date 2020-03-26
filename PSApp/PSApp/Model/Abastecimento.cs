@@ -15,7 +15,7 @@ namespace PSApp.Model
         private int _IdCombustivel;
         private int _IdFuncionario;
         private int _IdTipoPreco;
-        private int _Litros;
+        private long _Litros;
         private int _NumeroBico;
         private Double _Preco;
         private Boolean _PrevalecePrecoBico;
@@ -30,7 +30,7 @@ namespace PSApp.Model
         public int IdCombustivel { get => _IdCombustivel; set => _IdCombustivel = value; }
         public int IdFuncionario { get => _IdFuncionario; set => _IdFuncionario = value; }
         public int IdTipoPreco { get => _IdTipoPreco; set => _IdTipoPreco = value; }
-        public int Litros { get => _Litros; set => _Litros = value; }
+        public long Litros { get => _Litros; set => _Litros = value; }
         public int NumeroBico { get => _NumeroBico; set => _NumeroBico = value; }
         public double Preco { get => _Preco; set => _Preco = value; }
         public bool PrevalecePrecoBico { get => _PrevalecePrecoBico; set => _PrevalecePrecoBico = value; }
