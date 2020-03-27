@@ -24,7 +24,7 @@ export class ListaBicosComponent implements OnInit {
   selectBico(evt){
     if(this.bico != evt){
       this.bico = evt;
-      this.abastecimentos$ = this.dados.getAbastecimentos(evt);
+      this.abastecimentos$ = this.dados.getAbastecimentosFromBico(evt);
     }
     else{
       this.bico = 0;

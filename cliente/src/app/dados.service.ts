@@ -20,6 +20,13 @@ export class DadosService {
     );
   }
 
+  getAbastecimentosFromBico(id:number){
+    return this.http.get<Abastecimento[]>(`${this.API}Bicos/${id}`).pipe(
+      tap(console.log),
+      take(1)
+    );
+  }
+
   getAbastecimentos(id:number){
     return this.http.get<Abastecimento[]>(`${this.API}`).pipe(
       tap(console.log),

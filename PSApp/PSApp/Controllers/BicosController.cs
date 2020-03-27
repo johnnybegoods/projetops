@@ -26,21 +26,32 @@ namespace PSApp.Controllers
         {
 
 
-            string bicosString = await GetDadosApi("metapay/bicos");
-            ListaBicos bicos = JsonConvert.DeserializeObject<ListaBicos>(bicosString);
+            string bicosString = await GetDadosApi(Util.ENUM.END_POINT_BICOS);
 
-            List<Bico> SyncList = DataBase.BicoDAO.Sync(bicos.Bicos);
 
-            if(SyncList != null)
+            try
             {
-                return JsonConvert.SerializeObject(SyncList);
-            }
-            else
+                ListaBicos bicos = JsonConvert.DeserializeObject<ListaBicos>(bicosString);
+
+                List<Bico> SyncList = DataBase.BicoDAO.Sync(bicos.Bicos);
+
+                if (SyncList != null)
+                {
+                    return JsonConvert.SerializeObject(SyncList);
+                }
+                else
+                {
+                    Util.WriteLog.Write("ERRO AO SINCRONIZAR LISTA - NENHUM REGISTRO NO BANCO LOCAL", Util.ENUM.LOG_FILENAME_SYSTEM);
+                    return null;
+                }
+            }catch(System.ArgumentNullException ex)
             {
-                Util.WriteLog.Write("ERRO AO SINCRONIZAR LISTA - OBJETO NUO", Util.ENUM.LOG_FILENAME_SYSTEM);
-                return null;
+                Util.WriteLog.Write("" + ex, Util.ENUM.LOG_FILENAME_SYSTEM);
+                string query = "SELECT * FROM bico";
+                SqlConnection conn = DBAccess.GetConnection();
+                conn.Open();
+                return JsonConvert.SerializeObject(BicoDAO.GetData(conn, query));
             }
-            
         }
 
         // GET: api/Bico/5
@@ -48,24 +59,34 @@ namespace PSApp.Controllers
         public async Task<string> Get(int id)
         {
             
-            string abastcimentoString = await GetDadosApi("metapay/abastecimentos?bico="+id);
+            string abastcimentoString = await GetDadosApi(Util.ENUM.END_PONINT_ABASTECIMENTOS+id);
             
             CultureInfo provider = CultureInfo.InvariantCulture;
 
-            ListaAbastecimentos abastecimentos = 
+            try
+            {
+                ListaAbastecimentos abastecimentos =
                     JsonConvert.DeserializeObject<ListaAbastecimentos>(abastcimentoString, new IsoDateTimeConverter { DateTimeFormat = "dd/MM/yyyy HH:mm:ss" });
 
-            List<Abastecimento> SyncList = 
-                DataBase.AbastecimentoDAO.Sync(abastecimentos.Abastecimentos);
+                List<Abastecimento> SyncList =
+                    DataBase.AbastecimentoDAO.Sync(abastecimentos.Abastecimentos);
 
-            if (SyncList != null)
+                if (SyncList != null)
+                {
+                    return JsonConvert.SerializeObject(SyncList);
+                }
+                else
+                {
+                    Util.WriteLog.Write("ERRO AO SINCRONIZAR LISTA - NENHUM REGISTRO NO BANCO LOCAL", Util.ENUM.LOG_FILENAME_SYSTEM);
+                    return null;
+                }
+            }catch(System.ArgumentNullException ex)
             {
-                return JsonConvert.SerializeObject(SyncList);
-            }
-            else
-            {
-                Util.WriteLog.Write("ERRO AO SINCRONIZAR LISTA - OBJETO NUO", Util.ENUM.LOG_FILENAME_SYSTEM);
-                return null;
+                Util.WriteLog.Write("" + ex, Util.ENUM.LOG_FILENAME_SYSTEM);
+                string query = "SELECT * FROM abastecimento";
+                SqlConnection conn = DBAccess.GetConnection();
+                conn.Open();
+                return JsonConvert.SerializeObject(AbastecimentoDAO.GetData(conn, query));
             }
         }
 
@@ -75,7 +96,7 @@ namespace PSApp.Controllers
 
             using (var client = new HttpClient())
             {
-                client.BaseAddress = new System.Uri("http://metanet2.softether.net:8989/");
+                client.BaseAddress = new System.Uri(Util.ENUM.URI_SERVIDOR);
                 client.DefaultRequestHeaders.Accept.Clear();
                 client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
                 HttpResponseMessage response = await client.GetAsync(EndPoint);
