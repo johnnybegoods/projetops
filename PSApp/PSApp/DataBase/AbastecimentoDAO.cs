@@ -81,7 +81,10 @@ namespace PSApp.DataBase
         {
             List<Abastecimento> lista = new List<Abastecimento>();
 
-            //conn.Open();
+            if(conn.State == System.Data.ConnectionState.Closed)
+            {
+                conn.Open();
+            }
 
             SqlCommand command = new SqlCommand(query, conn);
             SqlDataReader reader = command.ExecuteReader();

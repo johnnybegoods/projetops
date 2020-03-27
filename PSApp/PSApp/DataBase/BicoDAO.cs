@@ -67,7 +67,10 @@ namespace PSApp.DataBase
         {
             List<Bico> lista = new List<Bico>();
 
-            //conn.Open();
+            if (conn.State == System.Data.ConnectionState.Closed)
+            {
+                conn.Open();
+            }
 
             SqlCommand command = new SqlCommand(query, conn);
             SqlDataReader reader = command.ExecuteReader();
