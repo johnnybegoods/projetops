@@ -12,6 +12,7 @@ using PSApp.DataBase;
 using System.Data.SqlClient;
 using System.Data;
 using Newtonsoft.Json.Converters;
+using System.Globalization;
 
 namespace PSApp.Controllers
 {
@@ -46,14 +47,13 @@ namespace PSApp.Controllers
         [HttpGet("{id}", Name = "GetById")]
         public async Task<string> Get(int id)
         {
-            var settings = new JsonSerializerSettings { DateFormatString = "yyyy-MM-ddTHH:mm:ss.fffZ" };
-
-            var formatoData = "dd/MM/YYYY HH:mm:ss";
-            var dateTimeConverter = new IsoDateTimeConverter { DateTimeFormat = formatoData };
-
+            
             string abastcimentoString = await GetDadosApi("metapay/abastecimentos?bico="+id);
+            
+            CultureInfo provider = CultureInfo.InvariantCulture;
+
             ListaAbastecimentos abastecimentos = 
-                JsonConvert.DeserializeObject<ListaAbastecimentos>(abastcimentoString, dateTimeConverter);
+                    JsonConvert.DeserializeObject<ListaAbastecimentos>(abastcimentoString, new IsoDateTimeConverter { DateTimeFormat = "dd/MM/yyyy HH:mm:ss" });
 
             List<Abastecimento> SyncList = 
                 DataBase.AbastecimentoDAO.Sync(abastecimentos.Abastecimentos);

@@ -44,6 +44,7 @@ namespace PSApp.DataBase
                         command.Parameters.Add(new SqlParameter("@IdCombustivel", a.IdCombustivel));
                         command.Parameters.Add(new SqlParameter("@IdFuncionario", a.IdFuncionario));
                         command.Parameters.Add(new SqlParameter("@IdTipoPreco", a.IdTipoPreco));
+                        command.Parameters.Add(new SqlParameter("@Litros", a.Litros));
                         command.Parameters.Add(new SqlParameter("@NumeroBico", a.NumeroBico));
                         command.Parameters.Add(new SqlParameter("@Preco", a.Preco));
                         command.Parameters.Add(new SqlParameter("@PrevalecePrecoBico", a.PrevalecePrecoBico));

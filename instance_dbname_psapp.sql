@@ -13,7 +13,7 @@ CREATE TABLE abastecimento(
 	IdCombustivel INT NULL,
 	IdFuncionario INT NOT NULL,
 	IdTipoPreco INT NOT NULL,
-	Litros INT NOT NULL,
+	Litros BIGINT NOT NULL,
 	NumeroBico INT NOT NULL,
 	Preco DECIMAL NOT NULL,
 	PrevalecePrecoBico BIT NOT NULL,

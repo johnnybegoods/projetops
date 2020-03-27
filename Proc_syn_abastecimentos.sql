@@ -1,6 +1,6 @@
 CREATE OR ALTER PROCEDURE SyncAbastecimentos @Datahora DATE, @Desc VARCHAR(50), @Func VARCHAR(50), 
 			@Id INT, @IdBico INT, @IdCombustivel INT, @IdFuncionario INT, @IdTipoPreco INT, 
-			@Litros INT, @NumeroBico INT, @Preco DECIMAL, @PrevalecePrecoBico BIT, @Selecionar BIT, @Total INT
+			@Litros BIGINT, @NumeroBico INT, @Preco DECIMAL, @PrevalecePrecoBico BIT, @Selecionar BIT, @Total INT
 AS
 	IF NOT EXISTS(select id from abastecimento where id = @Id)
 	BEGIN
