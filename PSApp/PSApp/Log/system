@@ -1,347 +1,60 @@
-24/03/2020 15:39:14 - {"ListaBicos":[{"DescricaoCombustivel":"ETANOL HIDRATADO","Id":5,"Numero":1},{"DescricaoCombustivel":"GASOLINA COMUM","Id":6,"Numero":2},{"DescricaoCombustivel":"DIESEL","Id":7,"Numero":3},{"DescricaoCombustivel":"OLEO DIESEL S10","Id":8,"Numero":4}]}
-24/03/2020 15:39:14 - {"ListaBicos":[{"DescricaoCombustivel":"ETANOL HIDRATADO","Id":5,"Numero":1},{"DescricaoCombustivel":"GASOLINA COMUM","Id":6,"Numero":2},{"DescricaoCombustivel":"DIESEL","Id":7,"Numero":3},{"DescricaoCombustivel":"OLEO DIESEL S10","Id":8,"Numero":4}]}
-24/03/2020 15:42:29 - {"ListaBicos":[{"DescricaoCombustivel":"ETANOL HIDRATADO","Id":5,"Numero":1},{"DescricaoCombustivel":"GASOLINA COMUM","Id":6,"Numero":2},{"DescricaoCombustivel":"DIESEL","Id":7,"Numero":3},{"DescricaoCombustivel":"OLEO DIESEL S10","Id":8,"Numero":4}]}
-24/03/2020 15:42:30 - System.NullReferenceException: Object reference not set to an instance of an object.
-   at PSApp.Controllers.BicosController.Get() in C:\Users\Johnny\Documents\dev\projetops\PSApp\PSApp\Controllers\BicosController.cs:line 40
-24/03/2020 15:42:30 - 
-24/03/2020 15:45:29 - {"ListaBicos":[{"DescricaoCombustivel":"ETANOL HIDRATADO","Id":5,"Numero":1},{"DescricaoCombustivel":"GASOLINA COMUM","Id":6,"Numero":2},{"DescricaoCombustivel":"DIESEL","Id":7,"Numero":3},{"DescricaoCombustivel":"OLEO DIESEL S10","Id":8,"Numero":4}]}
-24/03/2020 15:45:30 - System.NullReferenceException: Object reference not set to an instance of an object.
-   at PSApp.Controllers.BicosController.Get() in C:\Users\Johnny\Documents\dev\projetops\PSApp\PSApp\Controllers\BicosController.cs:line 40
-24/03/2020 15:45:30 - 
-24/03/2020 15:48:37 - {"ListaBicos":[{"DescricaoCombustivel":"ETANOL HIDRATADO","Id":5,"Numero":1},{"DescricaoCombustivel":"GASOLINA COMUM","Id":6,"Numero":2},{"DescricaoCombustivel":"DIESEL","Id":7,"Numero":3},{"DescricaoCombustivel":"OLEO DIESEL S10","Id":8,"Numero":4}]}
-24/03/2020 15:48:41 - 
-24/03/2020 15:50:30 - {"ListaBicos":[{"DescricaoCombustivel":"ETANOL HIDRATADO","Id":5,"Numero":1},{"DescricaoCombustivel":"GASOLINA COMUM","Id":6,"Numero":2},{"DescricaoCombustivel":"DIESEL","Id":7,"Numero":3},{"DescricaoCombustivel":"OLEO DIESEL S10","Id":8,"Numero":4}]}
-24/03/2020 15:50:32 - ETANOL HIDRATADO
-24/03/2020 15:50:32 - GASOLINA COMUM
-24/03/2020 15:50:32 - DIESEL
-24/03/2020 15:50:33 - OLEO DIESEL S10
-24/03/2020 15:50:33 - 
-24/03/2020 16:05:48 - {"ListaBicos":[{"DescricaoCombustivel":"ETANOL HIDRATADO","Id":5,"Numero":1},{"DescricaoCombustivel":"GASOLINA COMUM","Id":6,"Numero":2},{"DescricaoCombustivel":"DIESEL","Id":7,"Numero":3},{"DescricaoCombustivel":"OLEO DIESEL S10","Id":8,"Numero":4}]}
-24/03/2020 16:05:48 - {"ListaBicos":[{"DescricaoCombustivel":"ETANOL HIDRATADO","Id":5,"Numero":1},{"DescricaoCombustivel":"GASOLINA COMUM","Id":6,"Numero":2},{"DescricaoCombustivel":"DIESEL","Id":7,"Numero":3},{"DescricaoCombustivel":"OLEO DIESEL S10","Id":8,"Numero":4}]}
-24/03/2020 16:40:12 - {"ListaBicos":[{"DescricaoCombustivel":"ETANOL HIDRATADO","Id":5,"Numero":1},{"DescricaoCombustivel":"GASOLINA COMUM","Id":6,"Numero":2},{"DescricaoCombustivel":"DIESEL","Id":7,"Numero":3},{"DescricaoCombustivel":"OLEO DIESEL S10","Id":8,"Numero":4}]}
-24/03/2020 16:40:14 - 
-25/03/2020 08:33:33 - {"ListaBicos":[{"DescricaoCombustivel":"ETANOL HIDRATADO","Id":5,"Numero":1},{"DescricaoCombustivel":"GASOLINA COMUM","Id":6,"Numero":2},{"DescricaoCombustivel":"DIESEL","Id":7,"Numero":3},{"DescricaoCombustivel":"OLEO DIESEL S10","Id":8,"Numero":4}]}
-25/03/2020 08:33:42 - 
-25/03/2020 08:52:59 - {"ListaBicos":[{"DescricaoCombustivel":"ETANOL HIDRATADO","Id":5,"Numero":1},{"DescricaoCombustivel":"GASOLINA COMUM","Id":6,"Numero":2},{"DescricaoCombustivel":"DIESEL","Id":7,"Numero":3},{"DescricaoCombustivel":"OLEO DIESEL S10","Id":8,"Numero":4}]}
-25/03/2020 08:53:00 - 
-25/03/2020 15:52:28 - {"ListaBicos":[{"DescricaoCombustivel":"ETANOL HIDRATADO","Id":5,"Numero":1},{"DescricaoCombustivel":"GASOLINA COMUM","Id":6,"Numero":2},{"DescricaoCombustivel":"DIESEL","Id":7,"Numero":3},{"DescricaoCombustivel":"OLEO DIESEL S10","Id":8,"Numero":4}]}
-25/03/2020 15:52:30 - System.NullReferenceException: Object reference not set to an instance of an object.
-   at PSApp.DataBase.BicoDAO.Sync(List`1 lista) in C:\Users\Johnny\Documents\dev\projetops\PSApp\PSApp\DataBase\BicoDAO.cs:line 28
-25/03/2020 15:52:30 - ERRO AO SINCRONIZAR LISTA - OBJETO NUO
-25/03/2020 15:54:39 - {"ListaBicos":[{"DescricaoCombustivel":"ETANOL HIDRATADO","Id":5,"Numero":1},{"DescricaoCombustivel":"GASOLINA COMUM","Id":6,"Numero":2},{"DescricaoCombustivel":"DIESEL","Id":7,"Numero":3},{"DescricaoCombustivel":"OLEO DIESEL S10","Id":8,"Numero":4}]}
-25/03/2020 15:54:41 - ERRO AO SINCRONIZAR LISTA - OBJETO NUO
-25/03/2020 15:57:20 - {"ListaBicos":[{"DescricaoCombustivel":"ETANOL HIDRATADO","Id":5,"Numero":1},{"DescricaoCombustivel":"GASOLINA COMUM","Id":6,"Numero":2},{"DescricaoCombustivel":"DIESEL","Id":7,"Numero":3},{"DescricaoCombustivel":"OLEO DIESEL S10","Id":8,"Numero":4}]}
-25/03/2020 16:05:40 - {"ListaBicos":[{"DescricaoCombustivel":"ETANOL HIDRATADO","Id":5,"Numero":1},{"DescricaoCombustivel":"GASOLINA COMUM","Id":6,"Numero":2},{"DescricaoCombustivel":"DIESEL","Id":7,"Numero":3},{"DescricaoCombustivel":"OLEO DIESEL S10","Id":8,"Numero":4}]}
-25/03/2020 16:05:42 - {"ListaBicos":[{"DescricaoCombustivel":"ETANOL HIDRATADO","Id":5,"Numero":1},{"DescricaoCombustivel":"GASOLINA COMUM","Id":6,"Numero":2},{"DescricaoCombustivel":"DIESEL","Id":7,"Numero":3},{"DescricaoCombustivel":"OLEO DIESEL S10","Id":8,"Numero":4}]}
-25/03/2020 16:07:48 - {"ListaBicos":[{"DescricaoCombustivel":"ETANOL HIDRATADO","Id":5,"Numero":1},{"DescricaoCombustivel":"GASOLINA COMUM","Id":6,"Numero":2},{"DescricaoCombustivel":"DIESEL","Id":7,"Numero":3},{"DescricaoCombustivel":"OLEO DIESEL S10","Id":8,"Numero":4}]}
-25/03/2020 16:08:24 - {"ListaBicos":[{"DescricaoCombustivel":"ETANOL HIDRATADO","Id":5,"Numero":1},{"DescricaoCombustivel":"GASOLINA COMUM","Id":6,"Numero":2},{"DescricaoCombustivel":"DIESEL","Id":7,"Numero":3},{"DescricaoCombustivel":"OLEO DIESEL S10","Id":8,"Numero":4}]}
-25/03/2020 16:09:42 - {"ListaBicos":[{"DescricaoCombustivel":"ETANOL HIDRATADO","Id":5,"Numero":1},{"DescricaoCombustivel":"GASOLINA COMUM","Id":6,"Numero":2},{"DescricaoCombustivel":"DIESEL","Id":7,"Numero":3},{"DescricaoCombustivel":"OLEO DIESEL S10","Id":8,"Numero":4}]}
-25/03/2020 16:09:43 - ERRO AO SINCRONIZAR LISTA - OBJETO NUO
-25/03/2020 16:16:45 - {"ListaBicos":[{"DescricaoCombustivel":"ETANOL HIDRATADO","Id":5,"Numero":1},{"DescricaoCombustivel":"GASOLINA COMUM","Id":6,"Numero":2},{"DescricaoCombustivel":"DIESEL","Id":7,"Numero":3},{"DescricaoCombustivel":"OLEO DIESEL S10","Id":8,"Numero":4}]}
-25/03/2020 16:18:12 - {"ListaBicos":[{"DescricaoCombustivel":"ETANOL HIDRATADO","Id":5,"Numero":1},{"DescricaoCombustivel":"GASOLINA COMUM","Id":6,"Numero":2},{"DescricaoCombustivel":"DIESEL","Id":7,"Numero":3},{"DescricaoCombustivel":"OLEO DIESEL S10","Id":8,"Numero":4}]}
-25/03/2020 16:18:22 - {"ListaBicos":[{"DescricaoCombustivel":"ETANOL HIDRATADO","Id":5,"Numero":1},{"DescricaoCombustivel":"GASOLINA COMUM","Id":6,"Numero":2},{"DescricaoCombustivel":"DIESEL","Id":7,"Numero":3},{"DescricaoCombustivel":"OLEO DIESEL S10","Id":8,"Numero":4}]}
-26/03/2020 09:41:23 - {"ListaBicos":[{"DescricaoCombustivel":"ETANOL HIDRATADO","Id":5,"Numero":1},{"DescricaoCombustivel":"GASOLINA COMUM","Id":6,"Numero":2},{"DescricaoCombustivel":"DIESEL","Id":7,"Numero":3},{"DescricaoCombustivel":"OLEO DIESEL S10","Id":8,"Numero":4}]}
-26/03/2020 09:42:06 - {"ListaBicos":[{"DescricaoCombustivel":"ETANOL HIDRATADO","Id":5,"Numero":1},{"DescricaoCombustivel":"GASOLINA COMUM","Id":6,"Numero":2},{"DescricaoCombustivel":"DIESEL","Id":7,"Numero":3},{"DescricaoCombustivel":"OLEO DIESEL S10","Id":8,"Numero":4}]}
-26/03/2020 09:52:14 - {"ListaBicos":[{"DescricaoCombustivel":"ETANOL HIDRATADO","Id":5,"Numero":1},{"DescricaoCombustivel":"GASOLINA COMUM","Id":6,"Numero":2},{"DescricaoCombustivel":"DIESEL","Id":7,"Numero":3},{"DescricaoCombustivel":"OLEO DIESEL S10","Id":8,"Numero":4}]}
-26/03/2020 09:56:20 - {"ListaBicos":[{"DescricaoCombustivel":"ETANOL HIDRATADO","Id":5,"Numero":1},{"DescricaoCombustivel":"GASOLINA COMUM","Id":6,"Numero":2},{"DescricaoCombustivel":"DIESEL","Id":7,"Numero":3},{"DescricaoCombustivel":"OLEO DIESEL S10","Id":8,"Numero":4}]}
-26/03/2020 10:13:06 - {"ListaBicos":[{"DescricaoCombustivel":"ETANOL HIDRATADO","Id":5,"Numero":1},{"DescricaoCombustivel":"GASOLINA COMUM","Id":6,"Numero":2},{"DescricaoCombustivel":"DIESEL","Id":7,"Numero":3},{"DescricaoCombustivel":"OLEO DIESEL S10","Id":8,"Numero":4}]}
-26/03/2020 10:24:51 - {"ListaBicos":[{"DescricaoCombustivel":"ETANOL HIDRATADO","Id":5,"Numero":1},{"DescricaoCombustivel":"GASOLINA COMUM","Id":6,"Numero":2},{"DescricaoCombustivel":"DIESEL","Id":7,"Numero":3},{"DescricaoCombustivel":"OLEO DIESEL S10","Id":8,"Numero":4}]}
-26/03/2020 10:33:59 - {"ListaBicos":[{"DescricaoCombustivel":"ETANOL HIDRATADO","Id":5,"Numero":1},{"DescricaoCombustivel":"GASOLINA COMUM","Id":6,"Numero":2},{"DescricaoCombustivel":"DIESEL","Id":7,"Numero":3},{"DescricaoCombustivel":"OLEO DIESEL S10","Id":8,"Numero":4}]}
-26/03/2020 10:34:44 - {"ListaBicos":[{"DescricaoCombustivel":"ETANOL HIDRATADO","Id":5,"Numero":1},{"DescricaoCombustivel":"GASOLINA COMUM","Id":6,"Numero":2},{"DescricaoCombustivel":"DIESEL","Id":7,"Numero":3},{"DescricaoCombustivel":"OLEO DIESEL S10","Id":8,"Numero":4}]}
-26/03/2020 21:12:42 - ERRO AO SINCRONIZAR LISTA - OBJETO NUO
-26/03/2020 21:13:11 - ERRO AO SINCRONIZAR LISTA - OBJETO NUO
-26/03/2020 21:23:46 - ERRO AO SINCRONIZAR LISTA - OBJETO NUO
-27/03/2020 10:12:29 - System.ArgumentNullException: Value cannot be null. (Parameter 'value')
+30/03/2020 13:52:34 - System.ArgumentNullException: Value cannot be null. (Parameter 'value')
    at Newtonsoft.Json.Utilities.ValidationUtils.ArgumentNotNull(Object value, String parameterName)
    at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
    at Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value, JsonSerializerSettings settings)
    at Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value)
    at PSApp.Controllers.BicosController.Get() in C:\Users\Johnny\Documents\dev\projetops\PSApp\PSApp\Controllers\BicosController.cs:line 34
-27/03/2020 10:15:06 - System.ArgumentNullException: Value cannot be null. (Parameter 'value')
+30/03/2020 13:56:22 - System.ArgumentNullException: Value cannot be null. (Parameter 'value')
+   at Newtonsoft.Json.Utilities.ValidationUtils.ArgumentNotNull(Object value, String parameterName)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonConverter[] converters)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value, JsonConverter[] converters)
+   at PSApp.Controllers.BicosController.Get(Int32 id) in C:\Users\Johnny\Documents\dev\projetops\PSApp\PSApp\Controllers\BicosController.cs:line 68
+30/03/2020 13:56:27 - System.ArgumentNullException: Value cannot be null. (Parameter 'value')
+   at Newtonsoft.Json.Utilities.ValidationUtils.ArgumentNotNull(Object value, String parameterName)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonConverter[] converters)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value, JsonConverter[] converters)
+   at PSApp.Controllers.BicosController.Get(Int32 id) in C:\Users\Johnny\Documents\dev\projetops\PSApp\PSApp\Controllers\BicosController.cs:line 68
+30/03/2020 13:56:27 - System.ArgumentNullException: Value cannot be null. (Parameter 'value')
+   at Newtonsoft.Json.Utilities.ValidationUtils.ArgumentNotNull(Object value, String parameterName)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonConverter[] converters)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value, JsonConverter[] converters)
+   at PSApp.Controllers.BicosController.Get(Int32 id) in C:\Users\Johnny\Documents\dev\projetops\PSApp\PSApp\Controllers\BicosController.cs:line 68
+30/03/2020 13:56:27 - System.ArgumentNullException: Value cannot be null. (Parameter 'value')
+   at Newtonsoft.Json.Utilities.ValidationUtils.ArgumentNotNull(Object value, String parameterName)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonConverter[] converters)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value, JsonConverter[] converters)
+   at PSApp.Controllers.BicosController.Get(Int32 id) in C:\Users\Johnny\Documents\dev\projetops\PSApp\PSApp\Controllers\BicosController.cs:line 68
+30/03/2020 13:58:29 - System.ArgumentNullException: Value cannot be null. (Parameter 'value')
    at Newtonsoft.Json.Utilities.ValidationUtils.ArgumentNotNull(Object value, String parameterName)
    at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
    at Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value, JsonSerializerSettings settings)
    at Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value)
    at PSApp.Controllers.BicosController.Get() in C:\Users\Johnny\Documents\dev\projetops\PSApp\PSApp\Controllers\BicosController.cs:line 34
-27/03/2020 10:24:25 - System.ArgumentNullException: Value cannot be null. (Parameter 'value')
-   at Newtonsoft.Json.Utilities.ValidationUtils.ArgumentNotNull(Object value, String parameterName)
-   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
-   at Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value, JsonSerializerSettings settings)
-   at Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value)
-   at PSApp.Controllers.BicosController.Get() in C:\Users\Johnny\Documents\dev\projetops\PSApp\PSApp\Controllers\BicosController.cs:line 34
-27/03/2020 10:24:30 - System.ArgumentNullException: Value cannot be null. (Parameter 'value')
+30/03/2020 13:58:33 - System.ArgumentNullException: Value cannot be null. (Parameter 'value')
    at Newtonsoft.Json.Utilities.ValidationUtils.ArgumentNotNull(Object value, String parameterName)
    at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
    at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonConverter[] converters)
    at Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value, JsonConverter[] converters)
    at PSApp.Controllers.BicosController.Get(Int32 id) in C:\Users\Johnny\Documents\dev\projetops\PSApp\PSApp\Controllers\BicosController.cs:line 68
-27/03/2020 10:24:31 - System.ArgumentNullException: Value cannot be null. (Parameter 'value')
+30/03/2020 13:58:34 - System.ArgumentNullException: Value cannot be null. (Parameter 'value')
    at Newtonsoft.Json.Utilities.ValidationUtils.ArgumentNotNull(Object value, String parameterName)
    at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
    at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonConverter[] converters)
    at Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value, JsonConverter[] converters)
    at PSApp.Controllers.BicosController.Get(Int32 id) in C:\Users\Johnny\Documents\dev\projetops\PSApp\PSApp\Controllers\BicosController.cs:line 68
-27/03/2020 10:24:32 - System.ArgumentNullException: Value cannot be null. (Parameter 'value')
+30/03/2020 13:58:35 - System.ArgumentNullException: Value cannot be null. (Parameter 'value')
    at Newtonsoft.Json.Utilities.ValidationUtils.ArgumentNotNull(Object value, String parameterName)
    at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
    at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonConverter[] converters)
    at Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value, JsonConverter[] converters)
    at PSApp.Controllers.BicosController.Get(Int32 id) in C:\Users\Johnny\Documents\dev\projetops\PSApp\PSApp\Controllers\BicosController.cs:line 68
-27/03/2020 10:24:33 - System.ArgumentNullException: Value cannot be null. (Parameter 'value')
+30/03/2020 13:58:36 - System.ArgumentNullException: Value cannot be null. (Parameter 'value')
    at Newtonsoft.Json.Utilities.ValidationUtils.ArgumentNotNull(Object value, String parameterName)
    at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
    at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonConverter[] converters)
    at Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value, JsonConverter[] converters)
    at PSApp.Controllers.BicosController.Get(Int32 id) in C:\Users\Johnny\Documents\dev\projetops\PSApp\PSApp\Controllers\BicosController.cs:line 68
-27/03/2020 10:26:11 - System.ArgumentNullException: Value cannot be null. (Parameter 'value')
-   at Newtonsoft.Json.Utilities.ValidationUtils.ArgumentNotNull(Object value, String parameterName)
-   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
-   at Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value, JsonSerializerSettings settings)
-   at Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value)
-   at PSApp.Controllers.BicosController.Get() in C:\Users\Johnny\Documents\dev\projetops\PSApp\PSApp\Controllers\BicosController.cs:line 34
-27/03/2020 10:26:59 - System.ArgumentNullException: Value cannot be null. (Parameter 'value')
-   at Newtonsoft.Json.Utilities.ValidationUtils.ArgumentNotNull(Object value, String parameterName)
-   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
-   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonConverter[] converters)
-   at Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value, JsonConverter[] converters)
-   at PSApp.Controllers.BicosController.Get(Int32 id) in C:\Users\Johnny\Documents\dev\projetops\PSApp\PSApp\Controllers\BicosController.cs:line 68
-27/03/2020 10:27:37 - System.ArgumentNullException: Value cannot be null. (Parameter 'value')
-   at Newtonsoft.Json.Utilities.ValidationUtils.ArgumentNotNull(Object value, String parameterName)
-   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
-   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonConverter[] converters)
-   at Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value, JsonConverter[] converters)
-   at PSApp.Controllers.BicosController.Get(Int32 id) in C:\Users\Johnny\Documents\dev\projetops\PSApp\PSApp\Controllers\BicosController.cs:line 68
-27/03/2020 10:28:05 - System.ArgumentNullException: Value cannot be null. (Parameter 'value')
-   at Newtonsoft.Json.Utilities.ValidationUtils.ArgumentNotNull(Object value, String parameterName)
-   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
-   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonConverter[] converters)
-   at Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value, JsonConverter[] converters)
-   at PSApp.Controllers.BicosController.Get(Int32 id) in C:\Users\Johnny\Documents\dev\projetops\PSApp\PSApp\Controllers\BicosController.cs:line 68
-27/03/2020 10:28:09 - System.ArgumentNullException: Value cannot be null. (Parameter 'value')
-   at Newtonsoft.Json.Utilities.ValidationUtils.ArgumentNotNull(Object value, String parameterName)
-   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
-   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonConverter[] converters)
-   at Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value, JsonConverter[] converters)
-   at PSApp.Controllers.BicosController.Get(Int32 id) in C:\Users\Johnny\Documents\dev\projetops\PSApp\PSApp\Controllers\BicosController.cs:line 68
-27/03/2020 10:43:45 - System.ArgumentNullException: Value cannot be null. (Parameter 'value')
-   at Newtonsoft.Json.Utilities.ValidationUtils.ArgumentNotNull(Object value, String parameterName)
-   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
-   at Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value, JsonSerializerSettings settings)
-   at Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value)
-   at PSApp.Controllers.BicosController.Get() in C:\Users\Johnny\Documents\dev\projetops\PSApp\PSApp\Controllers\BicosController.cs:line 34
-27/03/2020 10:43:55 - System.ArgumentNullException: Value cannot be null. (Parameter 'value')
-   at Newtonsoft.Json.Utilities.ValidationUtils.ArgumentNotNull(Object value, String parameterName)
-   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
-   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonConverter[] converters)
-   at Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value, JsonConverter[] converters)
-   at PSApp.Controllers.BicosController.Get(Int32 id) in C:\Users\Johnny\Documents\dev\projetops\PSApp\PSApp\Controllers\BicosController.cs:line 68
-27/03/2020 10:44:35 - System.ArgumentNullException: Value cannot be null. (Parameter 'value')
-   at Newtonsoft.Json.Utilities.ValidationUtils.ArgumentNotNull(Object value, String parameterName)
-   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
-   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonConverter[] converters)
-   at Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value, JsonConverter[] converters)
-   at PSApp.Controllers.BicosController.Get(Int32 id) in C:\Users\Johnny\Documents\dev\projetops\PSApp\PSApp\Controllers\BicosController.cs:line 68
-27/03/2020 10:44:38 - System.ArgumentNullException: Value cannot be null. (Parameter 'value')
-   at Newtonsoft.Json.Utilities.ValidationUtils.ArgumentNotNull(Object value, String parameterName)
-   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
-   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonConverter[] converters)
-   at Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value, JsonConverter[] converters)
-   at PSApp.Controllers.BicosController.Get(Int32 id) in C:\Users\Johnny\Documents\dev\projetops\PSApp\PSApp\Controllers\BicosController.cs:line 68
-27/03/2020 10:46:51 - System.ArgumentNullException: Value cannot be null. (Parameter 'value')
-   at Newtonsoft.Json.Utilities.ValidationUtils.ArgumentNotNull(Object value, String parameterName)
-   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
-   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonConverter[] converters)
-   at Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value, JsonConverter[] converters)
-   at PSApp.Controllers.BicosController.Get(Int32 id) in C:\Users\Johnny\Documents\dev\projetops\PSApp\PSApp\Controllers\BicosController.cs:line 68
-27/03/2020 10:48:07 - System.ArgumentNullException: Value cannot be null. (Parameter 'value')
-   at Newtonsoft.Json.Utilities.ValidationUtils.ArgumentNotNull(Object value, String parameterName)
-   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
-   at Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value, JsonSerializerSettings settings)
-   at Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value)
-   at PSApp.Controllers.BicosController.Get() in C:\Users\Johnny\Documents\dev\projetops\PSApp\PSApp\Controllers\BicosController.cs:line 34
-27/03/2020 10:48:14 - System.ArgumentNullException: Value cannot be null. (Parameter 'value')
-   at Newtonsoft.Json.Utilities.ValidationUtils.ArgumentNotNull(Object value, String parameterName)
-   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
-   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonConverter[] converters)
-   at Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value, JsonConverter[] converters)
-   at PSApp.Controllers.BicosController.Get(Int32 id) in C:\Users\Johnny\Documents\dev\projetops\PSApp\PSApp\Controllers\BicosController.cs:line 68
-27/03/2020 10:48:14 - System.ArgumentNullException: Value cannot be null. (Parameter 'value')
-   at Newtonsoft.Json.Utilities.ValidationUtils.ArgumentNotNull(Object value, String parameterName)
-   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
-   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonConverter[] converters)
-   at Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value, JsonConverter[] converters)
-   at PSApp.Controllers.BicosController.Get(Int32 id) in C:\Users\Johnny\Documents\dev\projetops\PSApp\PSApp\Controllers\BicosController.cs:line 68
-27/03/2020 10:48:15 - System.ArgumentNullException: Value cannot be null. (Parameter 'value')
-   at Newtonsoft.Json.Utilities.ValidationUtils.ArgumentNotNull(Object value, String parameterName)
-   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
-   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonConverter[] converters)
-   at Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value, JsonConverter[] converters)
-   at PSApp.Controllers.BicosController.Get(Int32 id) in C:\Users\Johnny\Documents\dev\projetops\PSApp\PSApp\Controllers\BicosController.cs:line 68
-27/03/2020 10:48:15 - System.ArgumentNullException: Value cannot be null. (Parameter 'value')
-   at Newtonsoft.Json.Utilities.ValidationUtils.ArgumentNotNull(Object value, String parameterName)
-   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
-   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonConverter[] converters)
-   at Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value, JsonConverter[] converters)
-   at PSApp.Controllers.BicosController.Get(Int32 id) in C:\Users\Johnny\Documents\dev\projetops\PSApp\PSApp\Controllers\BicosController.cs:line 68
-27/03/2020 10:48:27 - System.ArgumentNullException: Value cannot be null. (Parameter 'value')
-   at Newtonsoft.Json.Utilities.ValidationUtils.ArgumentNotNull(Object value, String parameterName)
-   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
-   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonConverter[] converters)
-   at Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value, JsonConverter[] converters)
-   at PSApp.Controllers.BicosController.Get(Int32 id) in C:\Users\Johnny\Documents\dev\projetops\PSApp\PSApp\Controllers\BicosController.cs:line 68
-27/03/2020 10:48:31 - System.ArgumentNullException: Value cannot be null. (Parameter 'value')
-   at Newtonsoft.Json.Utilities.ValidationUtils.ArgumentNotNull(Object value, String parameterName)
-   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
-   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonConverter[] converters)
-   at Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value, JsonConverter[] converters)
-   at PSApp.Controllers.BicosController.Get(Int32 id) in C:\Users\Johnny\Documents\dev\projetops\PSApp\PSApp\Controllers\BicosController.cs:line 68
-27/03/2020 10:48:31 - System.ArgumentNullException: Value cannot be null. (Parameter 'value')
-   at Newtonsoft.Json.Utilities.ValidationUtils.ArgumentNotNull(Object value, String parameterName)
-   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
-   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonConverter[] converters)
-   at Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value, JsonConverter[] converters)
-   at PSApp.Controllers.BicosController.Get(Int32 id) in C:\Users\Johnny\Documents\dev\projetops\PSApp\PSApp\Controllers\BicosController.cs:line 68
-27/03/2020 10:48:32 - System.ArgumentNullException: Value cannot be null. (Parameter 'value')
-   at Newtonsoft.Json.Utilities.ValidationUtils.ArgumentNotNull(Object value, String parameterName)
-   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
-   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonConverter[] converters)
-   at Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value, JsonConverter[] converters)
-   at PSApp.Controllers.BicosController.Get(Int32 id) in C:\Users\Johnny\Documents\dev\projetops\PSApp\PSApp\Controllers\BicosController.cs:line 68
-27/03/2020 10:48:49 - System.ArgumentNullException: Value cannot be null. (Parameter 'value')
-   at Newtonsoft.Json.Utilities.ValidationUtils.ArgumentNotNull(Object value, String parameterName)
-   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
-   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonConverter[] converters)
-   at Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value, JsonConverter[] converters)
-   at PSApp.Controllers.BicosController.Get(Int32 id) in C:\Users\Johnny\Documents\dev\projetops\PSApp\PSApp\Controllers\BicosController.cs:line 68
-27/03/2020 10:48:49 - System.ArgumentNullException: Value cannot be null. (Parameter 'value')
-   at Newtonsoft.Json.Utilities.ValidationUtils.ArgumentNotNull(Object value, String parameterName)
-   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
-   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonConverter[] converters)
-   at Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value, JsonConverter[] converters)
-   at PSApp.Controllers.BicosController.Get(Int32 id) in C:\Users\Johnny\Documents\dev\projetops\PSApp\PSApp\Controllers\BicosController.cs:line 68
-27/03/2020 10:48:53 - System.ArgumentNullException: Value cannot be null. (Parameter 'value')
-   at Newtonsoft.Json.Utilities.ValidationUtils.ArgumentNotNull(Object value, String parameterName)
-   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
-   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonConverter[] converters)
-   at Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value, JsonConverter[] converters)
-   at PSApp.Controllers.BicosController.Get(Int32 id) in C:\Users\Johnny\Documents\dev\projetops\PSApp\PSApp\Controllers\BicosController.cs:line 68
-27/03/2020 10:48:54 - System.ArgumentNullException: Value cannot be null. (Parameter 'value')
-   at Newtonsoft.Json.Utilities.ValidationUtils.ArgumentNotNull(Object value, String parameterName)
-   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
-   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonConverter[] converters)
-   at Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value, JsonConverter[] converters)
-   at PSApp.Controllers.BicosController.Get(Int32 id) in C:\Users\Johnny\Documents\dev\projetops\PSApp\PSApp\Controllers\BicosController.cs:line 68
-27/03/2020 10:48:54 - System.ArgumentNullException: Value cannot be null. (Parameter 'value')
-   at Newtonsoft.Json.Utilities.ValidationUtils.ArgumentNotNull(Object value, String parameterName)
-   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
-   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonConverter[] converters)
-   at Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value, JsonConverter[] converters)
-   at PSApp.Controllers.BicosController.Get(Int32 id) in C:\Users\Johnny\Documents\dev\projetops\PSApp\PSApp\Controllers\BicosController.cs:line 68
-27/03/2020 10:48:55 - System.ArgumentNullException: Value cannot be null. (Parameter 'value')
-   at Newtonsoft.Json.Utilities.ValidationUtils.ArgumentNotNull(Object value, String parameterName)
-   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
-   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonConverter[] converters)
-   at Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value, JsonConverter[] converters)
-   at PSApp.Controllers.BicosController.Get(Int32 id) in C:\Users\Johnny\Documents\dev\projetops\PSApp\PSApp\Controllers\BicosController.cs:line 68
-27/03/2020 10:48:55 - System.ArgumentNullException: Value cannot be null. (Parameter 'value')
-   at Newtonsoft.Json.Utilities.ValidationUtils.ArgumentNotNull(Object value, String parameterName)
-   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
-   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonConverter[] converters)
-   at Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value, JsonConverter[] converters)
-   at PSApp.Controllers.BicosController.Get(Int32 id) in C:\Users\Johnny\Documents\dev\projetops\PSApp\PSApp\Controllers\BicosController.cs:line 68
-27/03/2020 10:48:55 - System.ArgumentNullException: Value cannot be null. (Parameter 'value')
-   at Newtonsoft.Json.Utilities.ValidationUtils.ArgumentNotNull(Object value, String parameterName)
-   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
-   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonConverter[] converters)
-   at Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value, JsonConverter[] converters)
-   at PSApp.Controllers.BicosController.Get(Int32 id) in C:\Users\Johnny\Documents\dev\projetops\PSApp\PSApp\Controllers\BicosController.cs:line 68
-27/03/2020 10:49:03 - System.ArgumentNullException: Value cannot be null. (Parameter 'value')
-   at Newtonsoft.Json.Utilities.ValidationUtils.ArgumentNotNull(Object value, String parameterName)
-   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
-   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonConverter[] converters)
-   at Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value, JsonConverter[] converters)
-   at PSApp.Controllers.BicosController.Get(Int32 id) in C:\Users\Johnny\Documents\dev\projetops\PSApp\PSApp\Controllers\BicosController.cs:line 68
-27/03/2020 10:49:04 - System.ArgumentNullException: Value cannot be null. (Parameter 'value')
-   at Newtonsoft.Json.Utilities.ValidationUtils.ArgumentNotNull(Object value, String parameterName)
-   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
-   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonConverter[] converters)
-   at Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value, JsonConverter[] converters)
-   at PSApp.Controllers.BicosController.Get(Int32 id) in C:\Users\Johnny\Documents\dev\projetops\PSApp\PSApp\Controllers\BicosController.cs:line 68
-27/03/2020 10:49:07 - System.ArgumentNullException: Value cannot be null. (Parameter 'value')
-   at Newtonsoft.Json.Utilities.ValidationUtils.ArgumentNotNull(Object value, String parameterName)
-   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
-   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonConverter[] converters)
-   at Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value, JsonConverter[] converters)
-   at PSApp.Controllers.BicosController.Get(Int32 id) in C:\Users\Johnny\Documents\dev\projetops\PSApp\PSApp\Controllers\BicosController.cs:line 68
-27/03/2020 10:49:10 - System.ArgumentNullException: Value cannot be null. (Parameter 'value')
-   at Newtonsoft.Json.Utilities.ValidationUtils.ArgumentNotNull(Object value, String parameterName)
-   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
-   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonConverter[] converters)
-   at Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value, JsonConverter[] converters)
-   at PSApp.Controllers.BicosController.Get(Int32 id) in C:\Users\Johnny\Documents\dev\projetops\PSApp\PSApp\Controllers\BicosController.cs:line 68
-27/03/2020 10:50:01 - System.ArgumentNullException: Value cannot be null. (Parameter 'value')
-   at Newtonsoft.Json.Utilities.ValidationUtils.ArgumentNotNull(Object value, String parameterName)
-   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
-   at Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value, JsonSerializerSettings settings)
-   at Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value)
-   at PSApp.Controllers.BicosController.Get() in C:\Users\Johnny\Documents\dev\projetops\PSApp\PSApp\Controllers\BicosController.cs:line 34
-27/03/2020 10:50:05 - System.ArgumentNullException: Value cannot be null. (Parameter 'value')
-   at Newtonsoft.Json.Utilities.ValidationUtils.ArgumentNotNull(Object value, String parameterName)
-   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
-   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonConverter[] converters)
-   at Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value, JsonConverter[] converters)
-   at PSApp.Controllers.BicosController.Get(Int32 id) in C:\Users\Johnny\Documents\dev\projetops\PSApp\PSApp\Controllers\BicosController.cs:line 68
-27/03/2020 10:50:06 - System.ArgumentNullException: Value cannot be null. (Parameter 'value')
-   at Newtonsoft.Json.Utilities.ValidationUtils.ArgumentNotNull(Object value, String parameterName)
-   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
-   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonConverter[] converters)
-   at Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value, JsonConverter[] converters)
-   at PSApp.Controllers.BicosController.Get(Int32 id) in C:\Users\Johnny\Documents\dev\projetops\PSApp\PSApp\Controllers\BicosController.cs:line 68
-27/03/2020 10:50:08 - System.ArgumentNullException: Value cannot be null. (Parameter 'value')
-   at Newtonsoft.Json.Utilities.ValidationUtils.ArgumentNotNull(Object value, String parameterName)
-   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
-   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonConverter[] converters)
-   at Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value, JsonConverter[] converters)
-   at PSApp.Controllers.BicosController.Get(Int32 id) in C:\Users\Johnny\Documents\dev\projetops\PSApp\PSApp\Controllers\BicosController.cs:line 68
-27/03/2020 10:50:09 - System.ArgumentNullException: Value cannot be null. (Parameter 'value')
-   at Newtonsoft.Json.Utilities.ValidationUtils.ArgumentNotNull(Object value, String parameterName)
-   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
-   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonConverter[] converters)
-   at Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value, JsonConverter[] converters)
-   at PSApp.Controllers.BicosController.Get(Int32 id) in C:\Users\Johnny\Documents\dev\projetops\PSApp\PSApp\Controllers\BicosController.cs:line 68
-27/03/2020 10:50:46 - System.ArgumentNullException: Value cannot be null. (Parameter 'value')
-   at Newtonsoft.Json.Utilities.ValidationUtils.ArgumentNotNull(Object value, String parameterName)
-   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
-   at Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value, JsonSerializerSettings settings)
-   at Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value)
-   at PSApp.Controllers.BicosController.Get() in C:\Users\Johnny\Documents\dev\projetops\PSApp\PSApp\Controllers\BicosController.cs:line 34
-27/03/2020 10:50:48 - System.ArgumentNullException: Value cannot be null. (Parameter 'value')
-   at Newtonsoft.Json.Utilities.ValidationUtils.ArgumentNotNull(Object value, String parameterName)
-   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
-   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonConverter[] converters)
-   at Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value, JsonConverter[] converters)
-   at PSApp.Controllers.BicosController.Get(Int32 id) in C:\Users\Johnny\Documents\dev\projetops\PSApp\PSApp\Controllers\BicosController.cs:line 68
-27/03/2020 10:50:48 - System.ArgumentNullException: Value cannot be null. (Parameter 'value')
-   at Newtonsoft.Json.Utilities.ValidationUtils.ArgumentNotNull(Object value, String parameterName)
-   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
-   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonConverter[] converters)
-   at Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value, JsonConverter[] converters)
-   at PSApp.Controllers.BicosController.Get(Int32 id) in C:\Users\Johnny\Documents\dev\projetops\PSApp\PSApp\Controllers\BicosController.cs:line 68
-27/03/2020 10:50:49 - System.ArgumentNullException: Value cannot be null. (Parameter 'value')
-   at Newtonsoft.Json.Utilities.ValidationUtils.ArgumentNotNull(Object value, String parameterName)
-   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
-   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonConverter[] converters)
-   at Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value, JsonConverter[] converters)
-   at PSApp.Controllers.BicosController.Get(Int32 id) in C:\Users\Johnny\Documents\dev\projetops\PSApp\PSApp\Controllers\BicosController.cs:line 68
-27/03/2020 10:50:49 - System.ArgumentNullException: Value cannot be null. (Parameter 'value')
-   at Newtonsoft.Json.Utilities.ValidationUtils.ArgumentNotNull(Object value, String parameterName)
-   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
-   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonConverter[] converters)
-   at Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value, JsonConverter[] converters)
-   at PSApp.Controllers.BicosController.Get(Int32 id) in C:\Users\Johnny\Documents\dev\projetops\PSApp\PSApp\Controllers\BicosController.cs:line 68
-27/03/2020 10:56:04 - System.ArgumentNullException: Value cannot be null. (Parameter 'value')
-   at Newtonsoft.Json.Utilities.ValidationUtils.ArgumentNotNull(Object value, String parameterName)
-   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
-   at Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value, JsonSerializerSettings settings)
-   at Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value)
-   at PSApp.Controllers.BicosController.Get() in C:\Users\Johnny\Documents\dev\projetops\PSApp\PSApp\Controllers\BicosController.cs:line 34

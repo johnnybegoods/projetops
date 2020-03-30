@@ -31,4 +31,15 @@ export class ListaBicosComponent implements OnInit {
     }
   }
 
+  senAfericao(evt){
+    this.dados.sendAfericao(evt).subscribe(
+      success => {
+        alert("Aferição Concluída");
+      },
+      error => {
+        alert("Erro ao realizar Aferição");
+      }
+    );
+  }
+
 }

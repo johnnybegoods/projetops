@@ -112,5 +112,62 @@ namespace PSApp.DataBase
             conn.Close();
             return lista;
         }
+
+        public static SqlException PersistAfericao(Abastecimento a)
+        {
+            SqlException ex = null;
+            SqlConnection conn = DBAccess.GetConnection();
+
+            try
+            {
+                string insert = "INSERT INTO afericao(id_abastecimento, processado) VALUES(@id_abast, @proc)";
+                conn.Open();
+                SqlCommand command = new SqlCommand(insert, conn);
+                command.Parameters.Add(new SqlParameter("@id_abast", a.Id));
+                command.Parameters.Add(new SqlParameter("@proc", false));
+                command.ExecuteNonQuery();
+            }catch(SqlException e)
+            {
+                Util.WriteLog.Write("" + e, Util.ENUM.LOG_FILENAME_DB);
+                ex = e;
+            }
+            finally
+            {
+                conn.Close();
+            }
+
+
+            return ex;
+        }
+
+        public static SqlException UpdateAfericao(Abastecimento a)
+        {
+            SqlException ex = null;
+            SqlConnection conn = DBAccess.GetConnection();
+
+            try
+            {
+                string insert = "UPDATE afericao " +
+                            "set processado =  @proc " +
+                            "WHERE id_abastecimento = @id_abast";
+                conn.Open();
+                SqlCommand command = new SqlCommand(insert, conn);
+                command.Parameters.Add(new SqlParameter("@id_abast", a.Id));
+                command.Parameters.Add(new SqlParameter("@proc", true));
+                command.ExecuteNonQuery();
+            }
+            catch (SqlException e)
+            {
+                Util.WriteLog.Write("" + e, Util.ENUM.LOG_FILENAME_DB);
+                ex = e;
+            }
+            finally
+            {
+                conn.Close();
+            }
+
+
+            return ex;
+        }
     }
 }

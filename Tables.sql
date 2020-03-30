@@ -22,3 +22,10 @@ CREATE TABLE abastecimento(
 	PRIMARY KEY(id),
 	FOREIGN KEY(IdBico) REFERENCES bico(Id)
 );
+
+CREATE TABLE afericao(
+	id INT IDENTITY(1,1) PRIMARY KEY,
+	id_abastecimento INT NOT NULL,
+	processado BIT NOT NULL,
+	FOREIGN KEY(id_abastecimento) REFERENCES abastecimento(id)
+);

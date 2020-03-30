@@ -13,6 +13,7 @@ using System.Data.SqlClient;
 using System.Data;
 using Newtonsoft.Json.Converters;
 using System.Globalization;
+using System.Threading;
 
 namespace PSApp.Controllers
 {
@@ -24,7 +25,6 @@ namespace PSApp.Controllers
         [HttpGet]
         public async Task<string> Get()
         {
-
 
             string bicosString = await GetDadosApi(Util.ENUM.END_POINT_BICOS);
 
@@ -91,6 +91,34 @@ namespace PSApp.Controllers
         }
 
 
+        [HttpPost]
+        public async Task<IActionResult> Post([FromBody] Abastecimento value)
+        {
+            
+            HttpResponseMessage response = await SendAfericao(value);
+            if (!response.IsSuccessStatusCode)
+            {
+                if(AbastecimentoDAO.PersistAfericao(value) == null)
+                {
+                    SyncAfericao(response);
+                    return StatusCode(201);
+                }
+                else
+                {
+                    Util.WriteLog.Write("persistiu aferição POST", Util.ENUM.LOG_FILENAME_SYSTEM);
+                    return StatusCode(500);
+                }
+            }
+            else
+            {
+                return StatusCode(201);
+            }
+
+
+
+        }
+
+
         public async Task<string> GetDadosApi(string EndPoint)
         {
 
@@ -114,5 +142,66 @@ namespace PSApp.Controllers
             }
         }
 
+        public async Task<HttpResponseMessage> SendAfericao(Abastecimento a)
+        {
+            using (var client = new HttpClient())
+            {
+                HttpResponseMessage response = await client.PostAsJsonAsync(
+                Util.ENUM.END_POINT_AFERICAO+a.Id, a);
+                return response;
+            }
+        }
+
+        public void SyncAfericao(HttpResponseMessage response)
+        {
+            string query = "SELECT * FROM abastecimento " +
+                            "JOIN afericao " +
+                            "ON abastecimento.id = afericao.id_abastecimento " +
+                            "AND afericao.processado = 0";
+            SqlConnection conn = DBAccess.GetConnection();
+            List<Abastecimento> afericoes = AbastecimentoDAO.GetData(conn, query);
+            HttpResponseMessage res = response;
+            CancellationTokenSource cancel = new CancellationTokenSource();
+            Task.Run(async () =>
+            {
+                while (!res.IsSuccessStatusCode)
+                {
+                    // Funções do seu aplicativo vão aqui
+                    foreach(Abastecimento a in afericoes)
+                    {
+                        res = await SendAfericao(a);
+                        if (res.IsSuccessStatusCode)
+                        {
+                            AbastecimentoDAO.UpdateAfericao(a);
+                            Util.WriteLog.Write("update afericao", Util.ENUM.LOG_FILENAME_SYSTEM);
+                        }
+                    }
+
+                    Thread.Sleep(TimeSpan.FromSeconds(5));
+                }
+            }, cancel.Token);
+
+            
+
+
+            /*
+            var waitHandle = new AutoResetEvent(false);
+            ThreadPool.RegisterWaitForSingleObject(
+                waitHandle,
+                // Method to execute
+                (state, timeout) =>
+                {
+                    //Abastecimento retorno = await SendAfericao(a);
+                    Util.WriteLog.Write("Timer", Util.ENUM.LOG_FILENAME_SYSTEM);
+                },
+                    // optional state object to pass to the method
+                    null,
+                    // Execute the method after 5 seccjonds
+                    TimeSpan.FromSeconds(60),
+                    // Set this to false to execute it repeatedly every 5 seconds
+                    false
+                );
+                */
+        }
     }
 }
