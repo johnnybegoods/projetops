@@ -43,7 +43,7 @@ namespace PSApp.DataBase
                     }
 
                     string query = "SELECT * FROM bico";
-                    bicos = GetData(conn, query);
+                    bicos = GetData(query);
 
                 }
                 catch (NullReferenceException e)
@@ -63,8 +63,9 @@ namespace PSApp.DataBase
             return bicos;
         }
 
-        public static List<Bico> GetData(SqlConnection conn, string query)
+        public static List<Bico> GetData(string query)
         {
+            SqlConnection conn = DBAccess.GetConnection();
             List<Bico> lista = new List<Bico>();
 
             if (conn.State == System.Data.ConnectionState.Closed)

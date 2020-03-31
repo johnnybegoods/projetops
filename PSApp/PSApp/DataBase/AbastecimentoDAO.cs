@@ -56,7 +56,7 @@ namespace PSApp.DataBase
                     }
 
                     string query = "SELECT * FROM abastecimento";
-                    abastecimentos = GetData(conn, query);
+                    abastecimentos = GetData(query);
 
                 }
                 catch (NullReferenceException e)
@@ -77,8 +77,9 @@ namespace PSApp.DataBase
         }
 
 
-        public static List<Abastecimento> GetData(SqlConnection conn, string query)
+        public static List<Abastecimento> GetData(string query)
         {
+            SqlConnection conn = DBAccess.GetConnection();
             List<Abastecimento> lista = new List<Abastecimento>();
 
             if(conn.State == System.Data.ConnectionState.Closed)

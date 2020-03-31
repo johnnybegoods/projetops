@@ -14,5 +14,7 @@ namespace PSApp.Util
         public static readonly string END_POINT_BICOS = "metapay/bicos";
         public static readonly string END_PONINT_ABASTECIMENTOS = "metapay/abastecimentos?bico=";
         public static readonly string END_POINT_AFERICAO = "http://metanet2.softether.net:8989/metapay/987654/abastecimentos/afericao?idAbastecimento=";
+
+
     }
 }

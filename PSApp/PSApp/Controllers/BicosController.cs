@@ -26,11 +26,13 @@ namespace PSApp.Controllers
         public async Task<string> Get()
         {
 
-            string bicosString = await GetDadosApi(Util.ENUM.END_POINT_BICOS);
+            SyncAfericao();
 
 
             try
             {
+                string bicosString = await GetDadosApi(Util.ENUM.END_POINT_BICOS);
+
                 ListaBicos bicos = JsonConvert.DeserializeObject<ListaBicos>(bicosString);
 
                 List<Bico> SyncList = DataBase.BicoDAO.Sync(bicos.Bicos);
@@ -48,9 +50,12 @@ namespace PSApp.Controllers
             {
                 Util.WriteLog.Write("" + ex, Util.ENUM.LOG_FILENAME_SYSTEM);
                 string query = "SELECT * FROM bico";
-                SqlConnection conn = DBAccess.GetConnection();
-                conn.Open();
-                return JsonConvert.SerializeObject(BicoDAO.GetData(conn, query));
+                return JsonConvert.SerializeObject(BicoDAO.GetData(query));
+            }catch(HttpRequestException ex)
+            {
+                Util.WriteLog.Write("" + ex, Util.ENUM.LOG_FILENEMA_HTTP);
+                string query = "SELECT * FROM bico";
+                return JsonConvert.SerializeObject(BicoDAO.GetData(query));
             }
         }
 
@@ -59,12 +64,12 @@ namespace PSApp.Controllers
         public async Task<string> Get(int id)
         {
             
-            string abastcimentoString = await GetDadosApi(Util.ENUM.END_PONINT_ABASTECIMENTOS+id);
-            
-            CultureInfo provider = CultureInfo.InvariantCulture;
-
             try
             {
+                string abastcimentoString = await GetDadosApi(Util.ENUM.END_PONINT_ABASTECIMENTOS + id);
+
+                CultureInfo provider = CultureInfo.InvariantCulture;
+
                 ListaAbastecimentos abastecimentos =
                     JsonConvert.DeserializeObject<ListaAbastecimentos>(abastcimentoString, new IsoDateTimeConverter { DateTimeFormat = "dd/MM/yyyy HH:mm:ss" });
 
@@ -83,10 +88,13 @@ namespace PSApp.Controllers
             }catch(System.ArgumentNullException ex)
             {
                 Util.WriteLog.Write("" + ex, Util.ENUM.LOG_FILENAME_SYSTEM);
-                string query = "SELECT * FROM abastecimento";
-                SqlConnection conn = DBAccess.GetConnection();
-                conn.Open();
-                return JsonConvert.SerializeObject(AbastecimentoDAO.GetData(conn, query));
+                string query = "SELECT * FROM abastecimento WHERE idBico = "+id;
+                return JsonConvert.SerializeObject(AbastecimentoDAO.GetData(query));
+            }catch(HttpRequestException ex)
+            {
+                Util.WriteLog.Write("" + ex, Util.ENUM.LOG_FILENEMA_HTTP);
+                string query = "SELECT * FROM abastecimento WHERE idBico = " + id;
+                return JsonConvert.SerializeObject(AbastecimentoDAO.GetData(query));
             }
         }
 
@@ -96,11 +104,11 @@ namespace PSApp.Controllers
         {
             
             HttpResponseMessage response = await SendAfericao(value);
-            if (!response.IsSuccessStatusCode)
+            if (response == null || !response.IsSuccessStatusCode)
             {
                 if(AbastecimentoDAO.PersistAfericao(value) == null)
                 {
-                    SyncAfericao(response);
+                    SyncAfericao();
                     return StatusCode(201);
                 }
                 else
@@ -146,62 +154,53 @@ namespace PSApp.Controllers
         {
             using (var client = new HttpClient())
             {
-                HttpResponseMessage response = await client.PostAsJsonAsync(
-                Util.ENUM.END_POINT_AFERICAO+a.Id, a);
+                HttpResponseMessage response = null;
+                try
+                {
+                    response = await client.PostAsJsonAsync(
+                        Util.ENUM.END_POINT_AFERICAO + a.Id, a);
+                }
+                catch(HttpRequestException ex)
+                {
+                    Util.WriteLog.Write("" + ex, Util.ENUM.LOG_FILENEMA_HTTP);
+                }
                 return response;
             }
         }
 
-        public void SyncAfericao(HttpResponseMessage response)
+        public void SyncAfericao()
         {
             string query = "SELECT * FROM abastecimento " +
                             "JOIN afericao " +
                             "ON abastecimento.id = afericao.id_abastecimento " +
                             "AND afericao.processado = 0";
-            SqlConnection conn = DBAccess.GetConnection();
-            List<Abastecimento> afericoes = AbastecimentoDAO.GetData(conn, query);
-            HttpResponseMessage res = response;
+            List<Abastecimento> afericoes = AbastecimentoDAO.GetData(query);
             CancellationTokenSource cancel = new CancellationTokenSource();
             Task.Run(async () =>
             {
-                while (!res.IsSuccessStatusCode)
+                Boolean conected = false;
+                while (conected)
                 {
                     // Funções do seu aplicativo vão aqui
                     foreach(Abastecimento a in afericoes)
                     {
-                        res = await SendAfericao(a);
+                        HttpResponseMessage res = await SendAfericao(a);
                         if (res.IsSuccessStatusCode)
                         {
                             AbastecimentoDAO.UpdateAfericao(a);
                             Util.WriteLog.Write("update afericao", Util.ENUM.LOG_FILENAME_SYSTEM);
+                            conected = true;
+                        }
+                        else
+                        {
+                            conected = false;
                         }
                     }
 
                     Thread.Sleep(TimeSpan.FromSeconds(5));
                 }
             }, cancel.Token);
-
-            
-
-
-            /*
-            var waitHandle = new AutoResetEvent(false);
-            ThreadPool.RegisterWaitForSingleObject(
-                waitHandle,
-                // Method to execute
-                (state, timeout) =>
-                {
-                    //Abastecimento retorno = await SendAfericao(a);
-                    Util.WriteLog.Write("Timer", Util.ENUM.LOG_FILENAME_SYSTEM);
-                },
-                    // optional state object to pass to the method
-                    null,
-                    // Execute the method after 5 seccjonds
-                    TimeSpan.FromSeconds(60),
-                    // Set this to false to execute it repeatedly every 5 seconds
-                    false
-                );
-                */
+           
         }
     }
 }

@@ -61,6 +61,8 @@ namespace PSApp
             {
                 endpoints.MapControllers();
             });
+
+
         }
     }
 }
