@@ -12,3 +12,4 @@
    at System.Net.Http.HttpClient.FinishSendAsyncBuffered(Task`1 sendTask, HttpRequestMessage request, CancellationTokenSource cts, Boolean disposeCts)
    at PSApp.Controllers.BicosController.GetDadosApi(String EndPoint) in C:\Users\Johnny\Documents\dev\projetops\PSApp\PSApp\Controllers\BicosController.cs:line 136
    at PSApp.Controllers.BicosController.Get() in C:\Users\Johnny\Documents\dev\projetops\PSApp\PSApp\Controllers\BicosController.cs:line 34
+31/03/2020 08:38:47 - update afericao

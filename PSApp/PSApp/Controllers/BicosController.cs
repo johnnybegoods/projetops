@@ -178,7 +178,7 @@ namespace PSApp.Controllers
             CancellationTokenSource cancel = new CancellationTokenSource();
             Task.Run(async () =>
             {
-                Boolean conected = false;
+                Boolean conected = true;
                 while (conected)
                 {
                     // Funções do seu aplicativo vão aqui
@@ -191,10 +191,7 @@ namespace PSApp.Controllers
                             Util.WriteLog.Write("update afericao", Util.ENUM.LOG_FILENAME_SYSTEM);
                             conected = true;
                         }
-                        else
-                        {
-                            conected = false;
-                        }
+                        
                     }
 
                     Thread.Sleep(TimeSpan.FromSeconds(5));
