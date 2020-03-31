@@ -181,17 +181,22 @@ namespace PSApp.Controllers
                 Boolean conected = true;
                 while (conected)
                 {
+                    Util.WriteLog.Write("afericao serv", Util.ENUM.LOG_FILENAME_SYSTEM);
                     // Funções do seu aplicativo vão aqui
+                    int countStatus = 0;
                     foreach(Abastecimento a in afericoes)
                     {
                         HttpResponseMessage res = await SendAfericao(a);
-                        if (res.IsSuccessStatusCode)
+                        if (res != null && res.IsSuccessStatusCode)
                         {
                             AbastecimentoDAO.UpdateAfericao(a);
                             Util.WriteLog.Write("update afericao", Util.ENUM.LOG_FILENAME_SYSTEM);
-                            conected = true;
+                            countStatus++;
                         }
-                        
+                    }
+                    if(countStatus == afericoes.Count())
+                    {
+                        conected = false;
                     }
 
                     Thread.Sleep(TimeSpan.FromSeconds(5));

@@ -1,15 +1,5 @@
-30/03/2020 16:43:59 - System.Net.Http.HttpRequestException: Este host não é conhecido.
- ---> System.Net.Sockets.SocketException (11001): Este host não é conhecido.
-   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
-   --- End of inner exception stack trace ---
-   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
-   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean allowHttp2, CancellationToken cancellationToken)
-   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
-   at System.Net.Http.HttpConnectionPool.GetHttpConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
-   at System.Net.Http.HttpConnectionPool.SendWithRetryAsync(HttpRequestMessage request, Boolean doRequestAuth, CancellationToken cancellationToken)
-   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
-   at System.Net.Http.DiagnosticsHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
-   at System.Net.Http.HttpClient.FinishSendAsyncBuffered(Task`1 sendTask, HttpRequestMessage request, CancellationTokenSource cts, Boolean disposeCts)
-   at PSApp.Controllers.BicosController.GetDadosApi(String EndPoint) in C:\Users\Johnny\Documents\dev\projetops\PSApp\PSApp\Controllers\BicosController.cs:line 136
-   at PSApp.Controllers.BicosController.Get() in C:\Users\Johnny\Documents\dev\projetops\PSApp\PSApp\Controllers\BicosController.cs:line 34
-31/03/2020 08:38:47 - update afericao
+31/03/2020 09:55:35 - afericao serv
+31/03/2020 09:56:13 - afericao serv
+31/03/2020 09:56:30 - afericao serv
+31/03/2020 09:56:45 - afericao serv
+31/03/2020 09:57:02 - afericao serv
